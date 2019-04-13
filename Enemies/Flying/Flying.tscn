@@ -1,18 +1,14 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Enemies/Flying/Flying.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Characters/druplicon-drupal8.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Ships/ship_angle_game1.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/Flying/States/Idle.gd" type="Script" id=3]
 [ext_resource path="res://Enemies/Flying/States/Patrol.gd" type="Script" id=4]
 [ext_resource path="res://Enemies/Flying/States/Attack.gd" type="Script" id=5]
 [ext_resource path="res://Enemies/Flying/States/Die.gd" type="Script" id=6]
 
 [sub_resource type="Animation" id=1]
-
 resource_name = "DIE"
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Position2D:position")
 tracks/0/interp = 1
@@ -123,11 +119,7 @@ tracks/8/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-
 resource_name = "SETUP"
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Position2D:position")
 tracks/0/interp = 1
@@ -238,118 +230,61 @@ tracks/8/keys = {
 }
 
 [sub_resource type="CircleShape2D" id=3]
-
-custom_solver_bias = 0.0
 radius = 15.8361
 
 [sub_resource type="CapsuleShape2D" id=4]
-
-custom_solver_bias = 0.0
 radius = 14.3834
 height = 6.52629
 
 [sub_resource type="RectangleShape2D" id=5]
-
-custom_solver_bias = 0.0
 extents = Vector2( 16.7945, 11.7731 )
 
 [node name="Flying" type="KinematicBody2D"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-collision/safe_margin = 0.08
 script = ExtResource( 1 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/DIE = SubResource( 1 )
 anims/SETUP = SubResource( 2 )
-blend_times = [  ]
 
-[node name="Tween" type="Tween" parent="." index="1"]
+[node name="Tween" type="Tween" parent="."]
 
-repeat = false
-playback_process_mode = 1
-playback_speed = 1.0
-playback/active = false
-playback/repeat = false
-playback/speed = 1.0
+[node name="Position2D" type="Position2D" parent="."]
 
-[node name="Position2D" type="Position2D" parent="." index="2"]
-
-[node name="Sprite" type="Sprite" parent="Position2D" index="0"]
-
+[node name="Sprite" type="Sprite" parent="Position2D"]
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
-
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.15778, 3.31336 )
 shape = SubResource( 3 )
 
-[node name="States" type="Node" parent="." index="4"]
+[node name="States" type="Node" parent="."]
 
-[node name="Idle" type="Node" parent="States" index="0"]
-
+[node name="Idle" type="Node" parent="States"]
 script = ExtResource( 3 )
 
-[node name="Patrol" type="Node" parent="States" index="1"]
-
+[node name="Patrol" type="Node" parent="States"]
 script = ExtResource( 4 )
 plot_scale = Vector2( 10000, 10000 )
-plot_start = 0.0
 plot_end = 6.3
 plot_step = 0.015
 
-[node name="Attack" type="Node" parent="States" index="2"]
-
+[node name="Attack" type="Node" parent="States"]
 script = ExtResource( 5 )
 
-[node name="Die" type="Node" parent="States" index="3"]
-
+[node name="Die" type="Node" parent="States"]
 script = ExtResource( 6 )
 
-[node name="Timer" type="Timer" parent="." index="5"]
+[node name="Timer" type="Timer" parent="."]
 
-process_mode = 1
-wait_time = 1.0
-one_shot = false
-autostart = false
+[node name="CauseDamageArea2D" type="Area2D" parent="."]
 
-[node name="CauseDamageArea2D" type="Area2D" parent="." index="6"]
-
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CauseDamageArea2D" index="0"]
-
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CauseDamageArea2D"]
 position = Vector2( -0.117111, 5.27694 )
 rotation = 1.59506
 shape = SubResource( 4 )
 
-[node name="TakeDamageArea2D" type="Area2D" parent="." index="7"]
+[node name="TakeDamageArea2D" type="Area2D" parent="."]
 
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TakeDamageArea2D" index="0"]
-
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TakeDamageArea2D"]
 position = Vector2( 0.0895767, -7.091 )
 shape = SubResource( 5 )
-
-
