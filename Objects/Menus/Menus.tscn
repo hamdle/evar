@@ -1,0 +1,295 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Objects/Menus/Menus.gd" type="Script" id=1]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Fonts/Ubuntu-R.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Fonts/Ubuntu-B.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 18
+font_data = SubResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.164706, 0.466667, 0.721569, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0, 0.27451, 0.521569, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.486275, 0.737255, 0.282353, 1 )
+
+[sub_resource type="DynamicFontData" id=8]
+font_path = "res://Fonts/Ubuntu-B.ttf"
+
+[sub_resource type="DynamicFont" id=9]
+size = 18
+font_data = SubResource( 8 )
+
+[sub_resource type="DynamicFontData" id=10]
+font_path = "res://Fonts/Ubuntu-R.ttf"
+
+[sub_resource type="DynamicFont" id=11]
+size = 24
+font_data = SubResource( 10 )
+
+[sub_resource type="DynamicFontData" id=12]
+font_path = "res://Fonts/Ubuntu-R.ttf"
+
+[sub_resource type="DynamicFont" id=13]
+size = 24
+font_data = SubResource( 12 )
+
+[sub_resource type="DynamicFontData" id=14]
+font_path = "res://Fonts/Ubuntu-B.ttf"
+
+[sub_resource type="DynamicFont" id=15]
+size = 18
+font_data = SubResource( 14 )
+
+[sub_resource type="DynamicFontData" id=16]
+font_path = "res://Fonts/Ubuntu-B.ttf"
+
+[sub_resource type="DynamicFont" id=17]
+size = 18
+font_data = SubResource( 16 )
+
+[node name="Menus" type="Node"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="Die" type="Container" parent="."]
+editor/display_folded = true
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="Polygon2D3" type="Polygon2D" parent="Die"]
+color = Color( 0, 0, 0, 0.569059 )
+polygon = PoolVector2Array( 1094.53, -11.6101, 1064.84, 656.998, -34.4246, 649.595, -39.9764, -40.6851 )
+
+[node name="TitleLabel" type="Label" parent="Die"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -87.0
+margin_top = -139.0
+margin_right = 86.0
+margin_bottom = -111.0
+custom_fonts/font = SubResource( 2 )
+text = "Game Over"
+align = 1
+
+[node name="PlayAgainButton" type="Button" parent="Die"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = -90.0
+margin_right = 50.0
+margin_bottom = -50.0
+rect_min_size = Vector2( 100, 40 )
+custom_fonts/font = SubResource( 4 )
+text = "Restart"
+
+[node name="QuitButton" type="Button" parent="Die"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = -40.0
+margin_right = 50.0
+rect_min_size = Vector2( 100, 40 )
+custom_fonts/font = SubResource( 4 )
+text = "Quit"
+
+[node name="MenuButton" type="Button" parent="Die"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = 10.0
+margin_right = 50.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 40 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 9 )
+text = "Levels"
+
+[node name="Win" type="Container" parent="."]
+editor/display_folded = true
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="Polygon2D2" type="Polygon2D" parent="Win"]
+color = Color( 0, 0, 0, 0.569059 )
+polygon = PoolVector2Array( 1094.53, -11.6101, 1064.84, 656.998, -34.4246, 649.595, -39.9764, -40.6851 )
+
+[node name="TitleLabel" type="Label" parent="Win"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -80.0
+margin_top = -139.0
+margin_right = 80.0
+margin_bottom = -111.0
+custom_fonts/font = SubResource( 11 )
+text = "Win"
+align = 1
+
+[node name="NextLevelButton" type="Button" parent="Win"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = -90.0
+margin_right = 50.0
+margin_bottom = -50.0
+rect_min_size = Vector2( 100, 40 )
+custom_fonts/font = SubResource( 9 )
+text = "Next"
+
+[node name="PlayAgainButton" type="Button" parent="Win"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = -40.0
+margin_right = 50.0
+rect_min_size = Vector2( 100, 40 )
+custom_fonts/font = SubResource( 9 )
+text = "Restart"
+
+[node name="MenuButton" type="Button" parent="Win"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = 10.0
+margin_right = 50.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 40 )
+custom_fonts/font = SubResource( 9 )
+text = "Quit"
+
+[node name="TimeLabel" type="Label" parent="Win"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -80.0
+margin_top = 68.0
+margin_right = 80.0
+margin_bottom = 82.0
+text = "0.00"
+align = 1
+
+[node name="Pause" type="Container" parent="."]
+editor/display_folded = true
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+
+[node name="Polygon2D" type="Polygon2D" parent="Pause"]
+color = Color( 0, 0, 0, 0.569059 )
+polygon = PoolVector2Array( 1094.53, -11.6101, 1064.84, 656.998, -34.4246, 649.595, -39.9764, -40.6851 )
+
+[node name="TitleLabel" type="Label" parent="Pause"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -49.0
+margin_top = -139.0
+margin_right = 48.0
+margin_bottom = -102.0
+custom_fonts/font = SubResource( 13 )
+text = "Pause"
+align = 1
+
+[node name="ResumeButton" type="Button" parent="Pause"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = -90.0
+margin_right = 50.0
+margin_bottom = -50.0
+rect_min_size = Vector2( 100, 40 )
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Resume"
+
+[node name="PlayAgainButton" type="Button" parent="Pause"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = -40.0
+margin_right = 50.0
+rect_min_size = Vector2( 100, 40 )
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Restart"
+
+[node name="QuitButton" type="Button" parent="Pause"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = 10.0
+margin_right = 50.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 40 )
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Quit"
+
+[node name="TimeLabel" type="Label" parent="Pause"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -48.0
+margin_top = 63.0
+margin_right = 47.0
+margin_bottom = 77.0
+text = "0.00"
+align = 1
+[connection signal="pressed" from="Die/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
+[connection signal="pressed" from="Die/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="Die/MenuButton" to="." method="_on_MenuButton_pressed"]
+[connection signal="pressed" from="Win/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
+[connection signal="pressed" from="Win/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
+[connection signal="pressed" from="Win/MenuButton" to="." method="_on_MenuButton_pressed"]
+[connection signal="pressed" from="Pause/ResumeButton" to="." method="_on_ResumeButton_pressed"]
+[connection signal="pressed" from="Pause/PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
+[connection signal="pressed" from="Pause/QuitButton" to="." method="_on_QuitButton_pressed"]

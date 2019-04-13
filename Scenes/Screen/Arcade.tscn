@@ -1,0 +1,868 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scenes/Screen/Arcade.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Characters/druplicon-blue.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Screen/CharacterDisplay.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/Characters/druplicon-drupal8.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Characters/druplicon-blue-invert.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/Ubuntu-B.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Sprites/star.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Fonts/TradeWinds-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 90
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Fonts/Ubuntu-B.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 18
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 45
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=10]
+font_data = ExtResource( 7 )
+
+[node name="Arcade" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Container" type="Container" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="LevelSelectLabel" type="Label" parent="Container"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -389.0
+margin_top = -250.0
+margin_right = 389.0
+margin_bottom = -118.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.0235294, 0.470588, 0.745098, 1 )
+text = "Level Select"
+align = 1
+
+[node name="BackButton" type="Button" parent="Container"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 120.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 100, 40 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Back"
+
+[node name="CharacterBackground" type="Polygon2D" parent="Container"]
+visible = false
+color = Color( 0.164706, 0.470588, 0.72549, 1 )
+polygon = PoolVector2Array( 924.235, 13.3875, 923.76, 63.3312, 983.454, 61.6664, 982.027, 11.9606 )
+
+[node name="CharacterDisplay" type="Sprite" parent="Container"]
+position = Vector2( 952, 35 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+drupal_texture = ExtResource( 2 )
+drupal_8_texture = ExtResource( 4 )
+drupal_quest_texture = ExtResource( 5 )
+
+[node name="LevelGrid" type="GridContainer" parent="Container"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -310.0
+margin_top = -82.0
+margin_right = 310.0
+margin_bottom = 274.0
+
+[node name="Row" type="GridContainer" parent="Container/LevelGrid"]
+margin_right = 620.0
+margin_bottom = 100.0
+columns = 6
+
+[node name="level1" type="Container" parent="Container/LevelGrid/Row"]
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level1button" type="Button" parent="Container/LevelGrid/Row/level1"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "1"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row/level1"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row/level1"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row/level1/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row/level1/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row/level1/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+
+[node name="level2" type="Container" parent="Container/LevelGrid/Row"]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level2button" type="Button" parent="Container/LevelGrid/Row/level2"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "2"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row/level2"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row/level2"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row/level2/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row/level2/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row/level2/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+
+[node name="level3" type="Container" parent="Container/LevelGrid/Row"]
+margin_left = 208.0
+margin_right = 308.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level3button" type="Button" parent="Container/LevelGrid/Row/level3"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "3"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row/level3"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row/level3"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row/level3/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row/level3/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row/level3/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+
+[node name="level4" type="Container" parent="Container/LevelGrid/Row"]
+margin_left = 312.0
+margin_right = 412.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level4button" type="Button" parent="Container/LevelGrid/Row/level4"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "4"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row/level4"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row/level4"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row/level4/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row/level4/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row/level4/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+
+[node name="level5" type="Container" parent="Container/LevelGrid/Row"]
+margin_left = 416.0
+margin_right = 516.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level5button" type="Button" parent="Container/LevelGrid/Row/level5"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "5"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row/level5"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row/level5"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row/level5/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row/level5/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row/level5/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+
+[node name="level6" type="Container" parent="Container/LevelGrid/Row"]
+margin_left = 520.0
+margin_right = 620.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level6button" type="Button" parent="Container/LevelGrid/Row/level6"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "6"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row/level6"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row/level6"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row/level6/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row/level6/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row/level6/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+
+[node name="MarginContainer" type="MarginContainer" parent="Container/LevelGrid"]
+margin_top = 104.0
+margin_right = 620.0
+margin_bottom = 114.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Row2" type="GridContainer" parent="Container/LevelGrid"]
+margin_top = 118.0
+margin_right = 620.0
+margin_bottom = 218.0
+columns = 6
+
+[node name="level7" type="Container" parent="Container/LevelGrid/Row2"]
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level7button" type="Button" parent="Container/LevelGrid/Row2/level7"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "7"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row2/level7"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row2/level7"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row2/level7/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row2/level7/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row2/level7/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+
+[node name="level8" type="Container" parent="Container/LevelGrid/Row2"]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level8button" type="Button" parent="Container/LevelGrid/Row2/level8"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "8"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row2/level8"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row2/level8"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row2/level8/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row2/level8/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row2/level8/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+
+[node name="level9" type="Container" parent="Container/LevelGrid/Row2"]
+margin_left = 208.0
+margin_right = 308.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level9button" type="Button" parent="Container/LevelGrid/Row2/level9"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "9"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row2/level9"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row2/level9"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row2/level9/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row2/level9/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row2/level9/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+
+[node name="level10" type="Container" parent="Container/LevelGrid/Row2"]
+margin_left = 312.0
+margin_right = 412.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level10button" type="Button" parent="Container/LevelGrid/Row2/level10"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "10"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row2/level10"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row2/level10"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row2/level10/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row2/level10/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row2/level10/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+
+[node name="level11" type="Container" parent="Container/LevelGrid/Row2"]
+margin_left = 416.0
+margin_right = 516.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level11button" type="Button" parent="Container/LevelGrid/Row2/level11"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "11"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row2/level11"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row2/level11"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row2/level11/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row2/level11/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row2/level11/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+
+[node name="level12" type="Container" parent="Container/LevelGrid/Row2"]
+margin_left = 520.0
+margin_right = 620.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level12button" type="Button" parent="Container/LevelGrid/Row2/level12"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "12"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row2/level12"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row2/level12"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row2/level12/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row2/level12/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row2/level12/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="Container/LevelGrid"]
+margin_top = 222.0
+margin_right = 620.0
+margin_bottom = 232.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Row3" type="GridContainer" parent="Container/LevelGrid"]
+margin_top = 236.0
+margin_right = 620.0
+margin_bottom = 336.0
+columns = 6
+
+[node name="level13" type="Container" parent="Container/LevelGrid/Row3"]
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level13button" type="Button" parent="Container/LevelGrid/Row3/level13"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "13"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row3/level13"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row3/level13"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row3/level13/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row3/level13/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row3/level13/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+
+[node name="level14" type="Container" parent="Container/LevelGrid/Row3"]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level14button" type="Button" parent="Container/LevelGrid/Row3/level14"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "14"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row3/level14"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row3/level14"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row3/level14/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row3/level14/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row3/level14/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+
+[node name="level15" type="Container" parent="Container/LevelGrid/Row3"]
+margin_left = 208.0
+margin_right = 308.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level15button" type="Button" parent="Container/LevelGrid/Row3/level15"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "15"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row3/level15"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row3/level15"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row3/level15/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row3/level15/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row3/level15/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+
+[node name="level16" type="Container" parent="Container/LevelGrid/Row3"]
+margin_left = 312.0
+margin_right = 412.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level16button" type="Button" parent="Container/LevelGrid/Row3/level16"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "16"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row3/level16"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row3/level16"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row3/level16/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row3/level16/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row3/level16/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+
+[node name="level17" type="Container" parent="Container/LevelGrid/Row3"]
+margin_left = 416.0
+margin_right = 516.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level17button" type="Button" parent="Container/LevelGrid/Row3/level17"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "17"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row3/level17"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row3/level17"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row3/level17/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row3/level17/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row3/level17/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+
+[node name="level18" type="Container" parent="Container/LevelGrid/Row3"]
+margin_left = 520.0
+margin_right = 620.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+
+[node name="level18button" type="Button" parent="Container/LevelGrid/Row3/level18"]
+margin_top = 20.0
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 80 )
+custom_fonts/font = SubResource( 9 )
+text = "18"
+
+[node name="BestTime" type="Label" parent="Container/LevelGrid/Row3/level18"]
+margin_top = 76.0
+margin_right = 100.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 100, 0 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "00:00"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="Container/LevelGrid/Row3/level18"]
+margin_right = 100.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Star1" type="Sprite" parent="Container/LevelGrid/Row3/level18/HBox"]
+position = Vector2( 20, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star2" type="Sprite" parent="Container/LevelGrid/Row3/level18/HBox"]
+position = Vector2( 50, 16 )
+texture = ExtResource( 8 )
+
+[node name="Star3" type="Sprite" parent="Container/LevelGrid/Row3/level18/HBox"]
+position = Vector2( 80, 16 )
+texture = ExtResource( 8 )
+[connection signal="pressed" from="Container/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row/level1/level1button" to="." method="_on_level1button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row/level2/level2button" to="." method="_on_level2button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row/level3/level3button" to="." method="_on_level3button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row/level4/level4button" to="." method="_on_level4button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row/level5/level5button" to="." method="_on_level5button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row/level6/level6button" to="." method="_on_level6button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row2/level7/level7button" to="." method="_on_level7button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row2/level8/level8button" to="." method="_on_level8button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row2/level9/level9button" to="." method="_on_level9button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row2/level10/level10button" to="." method="_on_level10button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row2/level11/level11button" to="." method="_on_level11button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row2/level12/level12button" to="." method="_on_level12button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row3/level13/level13button" to="." method="_on_level13button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row3/level14/level14button" to="." method="_on_level14button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row3/level15/level15button" to="." method="_on_level15button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row3/level16/level16button" to="." method="_on_level16button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row3/level17/level17button" to="." method="_on_level17button_pressed"]
+[connection signal="pressed" from="Container/LevelGrid/Row3/level18/level18button" to="." method="_on_level18button_pressed"]
