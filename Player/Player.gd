@@ -68,7 +68,9 @@ func _draw():
 			var distance_vector = self.get_global_mouse_position() - mouse_press
 			# Adjust y for global position of player
 			var y_dif = self.get_global_transform_with_canvas().get_origin().y -  global_position.y
+			var x_dif = self.get_global_transform_with_canvas().get_origin().x -  global_position.x
 			distance_vector.y = distance_vector.y + y_dif
+			distance_vector.x = distance_vector.x + x_dif
 			# Reflect the line
 			distance_vector.x = -distance_vector.x
 			distance_vector.y = -distance_vector.y
@@ -81,6 +83,7 @@ func _draw():
 			# Draw the mouse click
 			var mouse_press_adjusted = to_local(mouse_press)
 			mouse_press_adjusted.y = mouse_press_adjusted.y - y_dif
+			mouse_press_adjusted.x = mouse_press_adjusted.x - x_dif
 			draw_circle(mouse_press_adjusted, 20, Color(255,0,255))
 	
 func flip_sprite(flip):

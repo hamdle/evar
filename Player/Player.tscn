@@ -637,7 +637,6 @@ script = ExtResource( 11 )
 current = true
 limit_left = 0
 limit_top = 0
-limit_right = 1024
 limit_smoothed = true
 drag_margin_h_enabled = false
 smoothing_enabled = true

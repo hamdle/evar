@@ -15,9 +15,10 @@ extents = Vector2( 20, 500 )
 [node name="Level" type="Node" parent="."]
 
 [node name="Floor" parent="Level" instance=ExtResource( 1 )]
-position = Vector2( 513.206, 349.938 )
+position = Vector2( 424.456, 532.327 )
 
 [node name="Walls" type="Position2D" parent="Level"]
+position = Vector2( 3.19998, 168.492 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Level/Walls"]
 
@@ -26,7 +27,7 @@ position = Vector2( -20, 0 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Walls/StaticBody2D"]
-position = Vector2( 1045, 0 )
+position = Vector2( 1274.61, 9.39316 )
 shape = SubResource( 1 )
 
 [node name="Exit" parent="." instance=ExtResource( 2 )]
