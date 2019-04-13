@@ -3,19 +3,19 @@
 [ext_resource path="res://Scenes/Screen/Start.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=2]
 
-[sub_resource type="DynamicFontData" id=1]
-font_path = "res://Fonts/TradeWinds-Regular.ttf"
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://Fonts/Righteous-Regular.ttf"
 
 [sub_resource type="DynamicFont" id=2]
 size = 90
-font_data = SubResource( 1 )
+font_data = SubResource( 6 )
 
-[sub_resource type="DynamicFontData" id=3]
-font_path = "res://Fonts/Ubuntu-B.ttf"
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://Fonts/Righteous-Regular.ttf"
 
-[sub_resource type="DynamicFont" id=4]
-size = 18
-font_data = SubResource( 3 )
+[sub_resource type="DynamicFont" id=8]
+size = 24
+font_data = SubResource( 7 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 24
@@ -28,75 +28,6 @@ script = ExtResource( 1 )
 margin_right = 1025.0
 margin_bottom = 600.0
 
-[node name="DrupalQuestLabel2" type="Label" parent="Container"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -412.5
-margin_top = -220.0
-margin_right = 470.5
-margin_bottom = 47.0
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0.0235294, 0.470588, 0.745098, 1 )
-text = "Extravehicular"
-align = 1
-
-[node name="DrupalQuestLabel3" type="Label" parent="Container"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -412.5
-margin_top = -146.0
-margin_right = 470.5
-margin_bottom = 47.0
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0.0235294, 0.470588, 0.745098, 1 )
-text = "Astronaut Removal"
-align = 1
-
-[node name="ArcadeButton2" type="Button" parent="Container"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -50.5
-margin_top = 10.0
-margin_right = 49.5
-margin_bottom = 50.0
-rect_min_size = Vector2( 100, 40 )
-custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Play"
-
-[node name="PlayModeLabel" type="Label" parent="Container"]
-margin_left = 353.0
-margin_top = 456.0
-margin_right = 691.0
-margin_bottom = 484.0
-custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "A, W, D to move and jump"
-
-[node name="PlayModeLabel2" type="Label" parent="Container"]
-margin_left = 353.0
-margin_top = 488.0
-margin_right = 691.0
-margin_bottom = 516.0
-custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Space to throw"
-
-[node name="PlayModeLabel3" type="Label" parent="Container"]
-margin_left = 353.0
-margin_top = 520.0
-margin_right = 691.0
-margin_bottom = 548.0
-custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Click-and-drag to launch"
-
 [node name="VBoxContainer" type="VBoxContainer" parent="Container"]
 anchor_left = 0.5
 anchor_top = 1.0
@@ -106,4 +37,84 @@ margin_left = -169.5
 margin_top = -144.0
 margin_right = 168.5
 margin_bottom = -52.0
-[connection signal="pressed" from="Container/ArcadeButton2" to="." method="_on_ArcadeButton2_pressed"]
+
+[node name="DrupalQuestLabel2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -456.0
+margin_top = -269.0
+margin_right = 427.0
+margin_bottom = -2.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.92549, 0.184314, 0.160784, 1 )
+text = "EXTRAVEHICULAR"
+
+[node name="DrupalQuestLabel3" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -454.892
+margin_top = -190.0
+margin_right = 428.108
+margin_bottom = 3.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.937255, 0.713726, 0.168627, 1 )
+text = "ASTRONAUT"
+
+[node name="DrupalQuestLabel4" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -456.0
+margin_top = -109.0
+margin_right = 427.0
+margin_bottom = 93.2909
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.0784314, 0.396078, 0.615686, 1 )
+text = "REMOVAL"
+
+[node name="ArcadeButton2" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -448.0
+margin_top = 28.0
+margin_right = -348.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 100, 40 )
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Play"
+
+[node name="PlayModeLabel" type="Label" parent="."]
+margin_left = 64.9114
+margin_top = 411.679
+margin_right = 402.911
+margin_bottom = 439.679
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "A, W, D to move and jump"
+
+[node name="PlayModeLabel2" type="Label" parent="."]
+margin_left = 64.9114
+margin_top = 443.679
+margin_right = 402.911
+margin_bottom = 471.679
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Space to throw"
+
+[node name="PlayModeLabel3" type="Label" parent="."]
+margin_left = 64.9114
+margin_top = 475.679
+margin_right = 402.911
+margin_bottom = 503.679
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Click-and-drag to launch"
+[connection signal="pressed" from="ArcadeButton2" to="." method="_on_ArcadeButton2_pressed"]
