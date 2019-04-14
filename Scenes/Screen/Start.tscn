@@ -1,7 +1,15 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Screen/Start.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Sprites/Astronaut/ship_full_r1.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFontData" id=9]
+font_path = "res://Fonts/Righteous-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=10]
+size = 90
+font_data = SubResource( 9 )
 
 [sub_resource type="DynamicFontData" id=6]
 font_path = "res://Fonts/Righteous-Regular.ttf"
@@ -9,6 +17,9 @@ font_path = "res://Fonts/Righteous-Regular.ttf"
 [sub_resource type="DynamicFont" id=2]
 size = 90
 font_data = SubResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="DynamicFontData" id=7]
 font_path = "res://Fonts/Righteous-Regular.ttf"
@@ -47,7 +58,7 @@ margin_left = -456.0
 margin_top = -269.0
 margin_right = 427.0
 margin_bottom = -2.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 10 )
 custom_colors/font_color = Color( 0.92549, 0.184314, 0.160784, 1 )
 text = "EXTRAVEHICULAR"
 
@@ -70,7 +81,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -456.0
-margin_top = -109.0
+margin_top = -112.0
 margin_right = 427.0
 margin_bottom = 93.2909
 custom_fonts/font = SubResource( 2 )
@@ -87,8 +98,9 @@ margin_top = 28.0
 margin_right = -348.0
 margin_bottom = 68.0
 rect_min_size = Vector2( 100, 40 )
+custom_styles/normal = SubResource( 11 )
 custom_fonts/font = SubResource( 8 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.92549, 0.184314, 0.160784, 1 )
 text = "Play"
 
 [node name="PlayModeLabel" type="Label" parent="."]
@@ -117,4 +129,9 @@ margin_bottom = 503.679
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Click-and-drag to launch"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 735.734, 360.111 )
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 3 )
 [connection signal="pressed" from="ArcadeButton2" to="." method="_on_ArcadeButton2_pressed"]
