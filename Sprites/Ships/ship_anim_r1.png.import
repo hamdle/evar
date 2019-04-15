@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/drupal-bug-2.png-a3f4d80288f524cb948da0372eb4af2e.stex"
+path="res://.import/ship_anim_r1.png-fdac781b8f885108c687dcefa3673f8a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Characters/drupal-bug-2.png"
-dest_files=[ "res://.import/drupal-bug-2.png-a3f4d80288f524cb948da0372eb4af2e.stex" ]
+source_file="res://Sprites/Ships/ship_anim_r1.png"
+dest_files=[ "res://.import/ship_anim_r1.png-fdac781b8f885108c687dcefa3673f8a.stex" ]
 
 [params]
 

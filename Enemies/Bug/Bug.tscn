@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Enemies/Bug/Bug.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Ships/ship_angle_game1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Ships/astroship_game_r2.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/Bug/States/Idle.gd" type="Script" id=3]
 [ext_resource path="res://Enemies/Bug/States/Patrol.gd" type="Script" id=4]
 [ext_resource path="res://Enemies/Bug/States/Attack.gd" type="Script" id=5]
@@ -166,7 +166,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( 0.225933, -15.3861 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Position2D/Sprite:rotation_degrees")
@@ -274,10 +274,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -1.83 ) ]
+"values": [ Vector2( 0.225933, -15.3861 ), Vector2( 0.45187, -15.3861 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Position2D/Sprite:rotation_degrees")
@@ -286,10 +286,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ 0.0, 0.0 ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("Position2D/Sprite:scale")
@@ -298,10 +298,10 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("CollisionShape2D:position")
@@ -362,7 +362,7 @@ anims/WALK = SubResource( 3 )
 [node name="Position2D" type="Position2D" parent="."]
 
 [node name="Sprite" type="Sprite" parent="Position2D"]
-position = Vector2( 0, -1.83 )
+rotation = 3.14159
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

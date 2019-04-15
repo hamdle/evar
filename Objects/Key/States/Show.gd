@@ -7,7 +7,7 @@ const GRAVITY = 12
 const FLOOR_FRICTION = 0.2
 
 export var spawn_x_motion = 100
-export var spawn_y_motion = 300
+export var spawn_y_motion = 500
 
 func enter(key):
 	print(key.name + " SHOW")

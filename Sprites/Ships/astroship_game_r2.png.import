@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/druplicon-drupal8.png-f08e7e37cfa4a64dd0e131847ae88832.stex"
+path="res://.import/astroship_game_r2.png-b80fb2e40d5d5e2d5a1b50524a144c17.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Characters/druplicon-drupal8.png"
-dest_files=[ "res://.import/druplicon-drupal8.png-f08e7e37cfa4a64dd0e131847ae88832.stex" ]
+source_file="res://Sprites/Ships/astroship_game_r2.png"
+dest_files=[ "res://.import/astroship_game_r2.png-b80fb2e40d5d5e2d5a1b50524a144c17.stex" ]
 
 [params]
 

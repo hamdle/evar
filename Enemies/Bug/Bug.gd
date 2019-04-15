@@ -16,6 +16,9 @@ var patrol_origin = Vector2()
 # State Machine
 var current_state
 
+# Death texture
+var death_texture = preload("res://Sprites/Ships/ship_angle_game1.png")
+
 onready var state_nodes = {
 	STATE.IDLE: $States/Idle,
 	STATE.PATROL: $States/Patrol,
@@ -69,6 +72,9 @@ func set_patrol_origin():
 func die():
 	# Play dead animation
 	$AnimationPlayer.play("DIE")
+	
+	# Change to dead graphic
+	$Position2D/Sprite.set_texture(death_texture)
 	
 	# Remove from the living
 	remove_from_group("enemies")

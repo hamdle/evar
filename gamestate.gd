@@ -122,6 +122,19 @@ func reload_scene():
 func load_scene(key):
 	current_level_key = key
 	var res = level_map[current_level_key]
+	print("key: " + key)
+	# Black
+	VisualServer.set_default_clear_color(Color(0,0,0))
+	match key:
+		"none":
+			VisualServer.set_default_clear_color(Color("#131313"))
+		"start":
+			VisualServer.set_default_clear_color(Color("#131313"))
+		"character":
+			VisualServer.set_default_clear_color(Color("#131313"))
+		"levelselect":
+			VisualServer.set_default_clear_color(Color("#131313"))
+	
 	call_deferred("_deferred_load_scene", res)
 
 func _deferred_load_scene(res):

@@ -1,5 +1,7 @@
 extends Node
 
+signal key_carry
+
 enum STATE { NULL, HIDE, SHOW, CARRY, THROW }
 
 const UP = Vector2(0, -1)
@@ -13,15 +15,15 @@ func enter(key):
 	var col = key.get_node("CollisionShape2D")
 	col.disabled = true
 	
-	pass
-
+	var killTimer = get_tree().get_root().get_node("World/KillTimer")
+	self.connect("key_carry", killTimer, "_on_key_carry")
+	emit_signal("key_carry")
+	
 func exit(key):
 	pass
 	
 func update(key, delta):
 	key.position = key.character.position + carry_offset
-	
-	pass
 	
 func handleInput(key, event):
 	pass

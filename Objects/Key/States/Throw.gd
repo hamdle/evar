@@ -7,8 +7,8 @@ const GRAVITY = 12
 const FLOOR_FRICTION = 0.2
 
 export var carry_offset = Vector2(0, -60)
-export var throw_x_motion = 350
-export var throw_y_motion = 200
+export var throw_x_motion = 375
+export var throw_y_motion = 300
 
 var time_start = 0
 

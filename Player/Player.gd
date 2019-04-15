@@ -121,6 +121,11 @@ func _on_Player_damage():
 	current_state = state_nodes[STATE.DIE]
 	current_state.enter(self)
 
+func _on_killtimer_expired():
+	current_state.exit(self)
+	current_state = state_nodes[STATE.DIE]
+	current_state.enter(self)
+
 func _on_AnimationPlayer_animation_finished(anim_name):
 	# This function runs when any character animation is finished
 	# DOES NOT RUN if animation is set to loop

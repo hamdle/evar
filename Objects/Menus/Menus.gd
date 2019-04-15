@@ -22,15 +22,11 @@ func player_died():
 	# Set menu location
 	var player = get_tree().get_root().get_node("World/Player")
 	var new_loc = Vector2()
-	#new_loc.x = player.position.x
-	#new_loc.y = player.position.y - 50
-	new_loc.x = $Die.rect_position.x
+
 	var offset = 0;
 	if player.position.y > 300:
 		offset	= player.position.y - 300
-	print($Die.rect_position.y)
-	print($Die.get_global_transform_with_canvas().get_origin().y)
-	new_loc.x = $Die.rect_position.x
+	new_loc.x = $Die.rect_position.x - $Die.get_global_transform_with_canvas().get_origin().x
 	new_loc.y = $Die.rect_position.y - $Die.get_global_transform_with_canvas().get_origin().y
 	$Die.rect_position = new_loc
 	
@@ -52,13 +48,11 @@ func player_win():
 	# Set menu location
 	var player = get_tree().get_root().get_node("World/Player")
 	var new_loc = Vector2()
-	new_loc.x = $Win.rect_position.x
+
 	var offset = 0;
 	if player.position.y > 300:
 		offset	= player.position.y - 300
-	print($Win.rect_position.y)
-	print($Win.get_global_transform_with_canvas().get_origin().y)
-	new_loc.x = $Win.rect_position.x
+	new_loc.x = $Win.rect_position.x - $Win.get_global_transform_with_canvas().get_origin().x
 	new_loc.y = $Win.rect_position.y - $Win.get_global_transform_with_canvas().get_origin().y
 	$Win.rect_position = new_loc
 	
@@ -83,15 +77,11 @@ func _level_pause():
 	# Set menu location
 	var player = get_tree().get_root().get_node("World/Player")
 	var new_loc = Vector2()
-	#new_loc.x = player.position.x
-	#new_loc.y = player.position.y - 50
-	new_loc.x = $Pause.rect_position.x
+
 	var offset = 0;
 	if player.position.y > 300:
 		offset	= player.position.y - 300
-	print($Pause.rect_position.y)
-	print($Pause.get_global_transform_with_canvas().get_origin().y)
-	new_loc.x = $Pause.rect_position.x
+	new_loc.x = $Pause.rect_position.x - $Pause.get_global_transform_with_canvas().get_origin().x
 	new_loc.y = $Pause.rect_position.y - $Pause.get_global_transform_with_canvas().get_origin().y
 	$Pause.rect_position = new_loc
 	
