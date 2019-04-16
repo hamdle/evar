@@ -4,6 +4,7 @@ enum STATE { NULL, HIDE, SHOW, CARRY, THROW }
 
 const TAG = "Key"
 # Physics and Jump
+
 var motion = Vector2()
 var character
 

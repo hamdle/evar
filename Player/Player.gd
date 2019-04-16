@@ -110,11 +110,13 @@ func _on_Exit_entered(obj_entered):
 			current_state.exit(self)
 			current_state = state_nodes[STATE.WIN]
 			current_state.enter(self)
-	if obj_entered == "Player" && has_key: 
-		if not current_state == state_nodes[STATE.WIN]:
-			current_state.exit(self)
-			current_state = state_nodes[STATE.WIN]
-			current_state.enter(self)
+	if obj_entered == "Player":
+		_on_Player_damage()
+	#if obj_entered == "Player" && has_key: 
+	#	if not current_state == state_nodes[STATE.WIN]:
+	#		current_state.exit(self)
+	#		current_state = state_nodes[STATE.WIN]
+	#		current_state.enter(self)
 
 func _on_Player_damage():
 	current_state.exit(self)

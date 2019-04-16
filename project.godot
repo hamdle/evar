@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Extravehicular Astronaut Removal"
+config/name="Extravehicular Astronaut Removal Slam Dunk Edition"
 run/main_scene="res://Scenes/Screen/Start.tscn"
 boot_splash/image="res://wallpaper.png"
 config/icon="res://icon.png"
@@ -76,5 +76,5 @@ throw={
 
 [rendering]
 
-environment/default_clear_color=Color( 0.0745098, 0.0745098, 0.0745098, 1 )
+environment/default_clear_color=Color( 0.0431373, 0.0196078, 0.0196078, 1 )
 environment/default_environment="res://default_env.tres"

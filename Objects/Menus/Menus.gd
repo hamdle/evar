@@ -20,12 +20,9 @@ func _input(event):
 
 func player_died():
 	# Set menu location
-	var player = get_tree().get_root().get_node("World/Player")
+	#var player = get_tree().get_root().get_node("World/Player")
 	var new_loc = Vector2()
 
-	var offset = 0;
-	if player.position.y > 300:
-		offset	= player.position.y - 300
 	new_loc.x = $Die.rect_position.x - $Die.get_global_transform_with_canvas().get_origin().x
 	new_loc.y = $Die.rect_position.y - $Die.get_global_transform_with_canvas().get_origin().y
 	$Die.rect_position = new_loc
@@ -46,12 +43,9 @@ func player_win():
 	#+ " M" + String(gs.local_moves)
 	
 	# Set menu location
-	var player = get_tree().get_root().get_node("World/Player")
+	#var player = get_tree().get_root().get_node("World/Player")
 	var new_loc = Vector2()
 
-	var offset = 0;
-	if player.position.y > 300:
-		offset	= player.position.y - 300
 	new_loc.x = $Win.rect_position.x - $Win.get_global_transform_with_canvas().get_origin().x
 	new_loc.y = $Win.rect_position.y - $Win.get_global_transform_with_canvas().get_origin().y
 	$Win.rect_position = new_loc
@@ -75,12 +69,9 @@ func _level_pause():
 	var time_label = $Pause/TimeLabel
 	time_label.text = String(current_time)
 	# Set menu location
-	var player = get_tree().get_root().get_node("World/Player")
+	#var player = get_tree().get_root().get_node("World/Player")
 	var new_loc = Vector2()
 
-	var offset = 0;
-	if player.position.y > 300:
-		offset	= player.position.y - 300
 	new_loc.x = $Pause.rect_position.x - $Pause.get_global_transform_with_canvas().get_origin().x
 	new_loc.y = $Pause.rect_position.y - $Pause.get_global_transform_with_canvas().get_origin().y
 	$Pause.rect_position = new_loc

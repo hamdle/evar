@@ -15,6 +15,7 @@ func enter(key):
 	var col = key.get_node("CollisionShape2D")
 	col.disabled = true
 	
+	# Connect signal for Carry state
 	var killTimer = get_tree().get_root().get_node("World/KillTimer")
 	self.connect("key_carry", killTimer, "_on_key_carry")
 	emit_signal("key_carry")

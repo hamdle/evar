@@ -1,67 +1,57 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scenes/Screen/Start.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Ubuntu-R.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Sprites/Astronaut/ship_full_r1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Ships/ship_full_r1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/blue_ui.png" type="Texture" id=4]
+[ext_resource path="res://Objects/PlayerUI/SlamDunkEdition.tscn" type="PackedScene" id=5]
 
-[sub_resource type="DynamicFontData" id=1]
-font_path = "res://Fonts/Righteous-Regular.ttf"
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.92549, 0.184314, 0.160784, 1 )
 
-[sub_resource type="DynamicFont" id=2]
-size = 90
-font_data = SubResource( 1 )
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.92549, 0.184314, 0.160784, 1 )
 
-[sub_resource type="DynamicFontData" id=3]
-font_path = "res://Fonts/Righteous-Regular.ttf"
-
-[sub_resource type="DynamicFont" id=4]
-size = 90
-font_data = SubResource( 3 )
-
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.937255, 0.713726, 0.168627, 1 )
 
-[sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.937255, 0.713726, 0.168627, 1 )
-
-[sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 0.937255, 0.713726, 0.168627, 1 )
-
-[sub_resource type="DynamicFontData" id=8]
+[sub_resource type="DynamicFontData" id=4]
 font_path = "res://Fonts/Righteous-Regular.ttf"
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=5]
 size = 24
-font_data = SubResource( 8 )
+font_data = SubResource( 4 )
 
-[sub_resource type="StyleBoxFlat" id=11]
-bg_color = Color( 0, 0, 0, 1 )
+[sub_resource type="StyleBoxEmpty" id=6]
 
-[sub_resource type="StyleBoxFlat" id=12]
-bg_color = Color( 0, 0, 0, 1 )
+[sub_resource type="StyleBoxEmpty" id=7]
 
-[sub_resource type="StyleBoxFlat" id=13]
-bg_color = Color( 0, 0, 0, 1 )
+[sub_resource type="StyleBoxEmpty" id=8]
 
-[sub_resource type="StyleBoxFlat" id=14]
-bg_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="StyleBoxFlat" id=15]
-bg_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="StyleBoxFlat" id=16]
-bg_color = Color( 0, 0, 0, 1 )
+[sub_resource type="DynamicFontData" id=9]
+font_path = "res://Fonts/Righteous-Regular.ttf"
 
 [sub_resource type="DynamicFont" id=10]
+size = 24
+font_data = SubResource( 9 )
+
+[sub_resource type="DynamicFontData" id=11]
+font_path = "res://Fonts/Righteous-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=12]
+size = 90
+font_data = SubResource( 11 )
+
+[sub_resource type="DynamicFontData" id=13]
+font_path = "res://Fonts/Righteous-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=14]
+size = 90
+font_data = SubResource( 13 )
+
+[sub_resource type="DynamicFont" id=15]
 size = 21
 font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFontData" id=17]
-font_path = "res://Fonts/MINSPSW_.ttf"
-
-[sub_resource type="DynamicFont" id=18]
-size = 28
-font_data = SubResource( 17 )
 
 [node name="Start" type="Node"]
 script = ExtResource( 1 )
@@ -80,46 +70,7 @@ margin_top = -144.0
 margin_right = 168.5
 margin_bottom = -52.0
 
-[node name="DrupalQuestLabel2" type="Label" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -456.0
-margin_top = -269.0
-margin_right = 427.0
-margin_bottom = -2.0
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0.92549, 0.184314, 0.160784, 1 )
-text = "EXTRAVEHICULAR"
-
-[node name="DrupalQuestLabel3" type="Label" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -454.892
-margin_top = -190.0
-margin_right = 428.108
-margin_bottom = 3.0
-custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0.937255, 0.713726, 0.168627, 1 )
-text = "ASTRONAUT"
-
-[node name="DrupalQuestLabel4" type="Label" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -456.0
-margin_top = -112.0
-margin_right = 427.0
-margin_bottom = 93.2909
-custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0.0784314, 0.396078, 0.615686, 1 )
-text = "REMOVAL"
-
-[node name="ArcadeButton2" type="Button" parent="."]
+[node name="PlayButton2" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -129,101 +80,132 @@ margin_top = 38.5013
 margin_right = -347.462
 margin_bottom = 78.5013
 rect_min_size = Vector2( 100, 40 )
-custom_styles/hover = SubResource( 5 )
-custom_styles/pressed = SubResource( 6 )
-custom_styles/normal = SubResource( 7 )
-custom_fonts/font = SubResource( 9 )
-custom_colors/font_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 text = "Play"
 
-[node name="ArcadeButton3" type="Button" parent="."]
-visible = false
+[node name="CreditsButton3" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -465.858
-margin_top = 94.3402
-margin_right = -325.858
-margin_bottom = 134.34
+margin_left = -330.927
+margin_top = 39.1465
+margin_right = -190.927
+margin_bottom = 79.1465
 rect_min_size = Vector2( 100, 40 )
-custom_styles/hover = SubResource( 11 )
-custom_styles/pressed = SubResource( 12 )
-custom_styles/normal = SubResource( 13 )
-custom_fonts/font = SubResource( 9 )
-custom_colors/font_color = Color( 0.415686, 0.415686, 0.415686, 1 )
-custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
-custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
-text = "Controls"
-
-[node name="ArcadeButton4" type="Button" parent="."]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -453.09
-margin_top = 138.549
-margin_right = -353.09
-margin_bottom = 178.549
-rect_min_size = Vector2( 100, 40 )
-custom_styles/hover = SubResource( 14 )
-custom_styles/pressed = SubResource( 15 )
-custom_styles/normal = SubResource( 16 )
-custom_fonts/font = SubResource( 9 )
-custom_colors/font_color = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.12549, 0.12549, 0.12549, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 text = "Credits"
 
-[node name="PlayModeLabel" type="Label" parent="."]
+[node name="BlueWave" type="Sprite" parent="."]
+visible = false
+position = Vector2( 169.808, 813.164 )
+texture = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 846.464, 421.627 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="Title" type="Node" parent="."]
+
+[node name="DrupalQuestLabel2" type="Label" parent="Title"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -456.0
+margin_top = -269.0
+margin_right = 427.0
+margin_bottom = -2.0
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0.92549, 0.184314, 0.160784, 1 )
+text = "EXTRAVEHICULAR"
+
+[node name="DrupalQuestLabel3" type="Label" parent="Title"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -454.892
+margin_top = -190.0
+margin_right = 428.108
+margin_bottom = 3.0
+custom_fonts/font = SubResource( 14 )
+custom_colors/font_color = Color( 0.937255, 0.713726, 0.168627, 1 )
+text = "ASTRONAUT"
+
+[node name="DrupalQuestLabel4" type="Label" parent="Title"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -456.0
+margin_top = -112.0
+margin_right = 427.0
+margin_bottom = 93.2909
+custom_fonts/font = SubResource( 14 )
+custom_colors/font_color = Color( 0.0784314, 0.396078, 0.615686, 1 )
+text = "REMOVAL"
+
+[node name="Controls" type="Node" parent="."]
+
+[node name="PlayModeLabel" type="Label" parent="Controls"]
 margin_left = 176.041
 margin_top = 444.542
 margin_right = 514.041
 margin_bottom = 472.542
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0.807843, 0.807843, 0.807843, 1 )
 text = "WASD    Move and Jump"
 uppercase = true
 
-[node name="PlayModeLabel2" type="Label" parent="."]
+[node name="PlayModeLabel2" type="Label" parent="Controls"]
 margin_left = 99.7174
 margin_top = 470.188
 margin_right = 437.717
 margin_bottom = 498.188
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0.807843, 0.807843, 0.807843, 1 )
 text = "Click & drag    Launch"
 uppercase = true
 
-[node name="PlayModeLabel3" type="Label" parent="."]
-margin_left = 173.726
-margin_top = 494.284
-margin_right = 511.726
-margin_bottom = 522.284
-custom_fonts/font = SubResource( 10 )
+[node name="PlayModeLabel3" type="Label" parent="Controls"]
+margin_left = 127.297
+margin_top = 495.513
+margin_right = 465.297
+margin_bottom = 523.513
+custom_fonts/font = SubResource( 15 )
 custom_colors/font_color = Color( 0.807843, 0.807843, 0.807843, 1 )
-text = "Space    Throw"
+text = "Space Bar    Throw Slam Dunk"
 uppercase = true
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 735.734, 360.111 )
-scale = Vector2( 0.9, 0.9 )
-texture = ExtResource( 3 )
+[node name="PlayModeLabel4" type="Label" parent="Controls"]
+margin_left = 261.163
+margin_top = 484.116
+margin_right = 599.163
+margin_bottom = 512.116
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color = Color( 0.807843, 0.807843, 0.807843, 1 )
+text = "_______"
+uppercase = true
 
-[node name="PlayModeLabel4" type="Label" parent="."]
-visible = false
-margin_left = 68.0692
-margin_top = 525.153
-margin_right = 592.069
-margin_bottom = 565.153
-custom_fonts/font = SubResource( 18 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Launch astronaut in to black hole"
-[connection signal="mouse_entered" from="ArcadeButton2" to="." method="_on_ArcadeButton2_mouse_entered"]
-[connection signal="mouse_exited" from="ArcadeButton2" to="." method="_on_ArcadeButton2_mouse_exited"]
-[connection signal="pressed" from="ArcadeButton2" to="." method="_on_ArcadeButton2_pressed"]
-[connection signal="pressed" from="ArcadeButton3" to="." method="_on_ArcadeButton3_pressed"]
-[connection signal="pressed" from="ArcadeButton4" to="." method="_on_ArcadeButton4_pressed"]
+[node name="SlamDunkEdition" parent="." instance=ExtResource( 5 )]
+[connection signal="mouse_entered" from="PlayButton2" to="." method="_on_ArcadeButton2_mouse_entered"]
+[connection signal="mouse_exited" from="PlayButton2" to="." method="_on_ArcadeButton2_mouse_exited"]
+[connection signal="pressed" from="PlayButton2" to="." method="_on_ArcadeButton2_pressed"]
+[connection signal="pressed" from="CreditsButton3" to="." method="_on_ArcadeButton3_pressed"]

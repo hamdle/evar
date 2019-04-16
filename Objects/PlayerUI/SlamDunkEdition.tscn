@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="DynamicFontData" id=17]
+font_path = "res://Fonts/MINSPSW_.ttf"
+
+[sub_resource type="DynamicFont" id=18]
+size = 36
+font_data = SubResource( 17 )
+
+[sub_resource type="DynamicFontData" id=19]
+font_path = "res://Fonts/Righteous-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=20]
+size = 15
+font_data = SubResource( 19 )
+
+[node name="SlamDunkEdition" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="PlayModeLabel4" type="Label" parent="."]
+margin_left = 873.333
+margin_top = 47.2577
+margin_right = 1397.33
+margin_bottom = 150.258
+custom_fonts/font = SubResource( 18 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "SLAM
+"
+
+[node name="PlayModeLabel5" type="Label" parent="."]
+margin_left = 863.86
+margin_top = 78.8366
+margin_right = 1387.86
+margin_bottom = 128.837
+custom_fonts/font = SubResource( 18 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "DUNK"
+
+[node name="PlayModeLabel6" type="Label" parent="."]
+margin_left = 917.544
+margin_top = 118.837
+margin_right = 1441.54
+margin_bottom = 158.837
+custom_fonts/font = SubResource( 20 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "edition"
