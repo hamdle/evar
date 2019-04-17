@@ -23,10 +23,10 @@ size = 64
 font_data = SubResource( 6 )
 
 [sub_resource type="DynamicFontData" id=10]
-font_path = "res://Fonts/Righteous-Regular.ttf"
+font_path = "res://Fonts/Ubuntu-B.ttf"
 
 [sub_resource type="DynamicFont" id=11]
-size = 32
+size = 21
 font_data = SubResource( 10 )
 
 [sub_resource type="DynamicFontData" id=8]
@@ -56,9 +56,9 @@ custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 text = "Back"
 
 [node name="TitleLabel" type="Label" parent="."]
-margin_top = 15.0
+margin_top = 40.0
 margin_right = 1024.0
-margin_bottom = 96.0
+margin_bottom = 121.0
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.92549, 0.184314, 0.160784, 1 )
 text = "Credits"
@@ -71,7 +71,7 @@ margin_top = 80.0
 margin_right = 1024.0
 margin_bottom = 161.0
 custom_fonts/font = SubResource( 11 )
-custom_colors/font_color = Color( 0.0784314, 0.396078, 0.615686, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Game Design by Eric Marty"
 align = 1
 valign = 1

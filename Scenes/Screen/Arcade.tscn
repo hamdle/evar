@@ -17,7 +17,7 @@
 font_path = "res://Fonts/Righteous-Regular.ttf"
 
 [sub_resource type="DynamicFont" id=2]
-size = 80
+size = 64
 font_data = SubResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -102,10 +102,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -389.0
-margin_top = -250.0
-margin_right = 389.0
-margin_bottom = -107.0
+margin_left = -512.0
+margin_top = -255.0
+margin_right = 512.0
+margin_bottom = -174.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.92549, 0.184314, 0.160784, 1 )
 text = "Level Select"
@@ -127,9 +127,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -310.0
-margin_top = -133.32
+margin_top = -150.0
 margin_right = 310.0
-margin_bottom = 222.68
+margin_bottom = 186.0
 
 [node name="Row" type="GridContainer" parent="Container/LevelGrid"]
 margin_right = 620.0
@@ -935,15 +935,19 @@ texture = ExtResource( 8 )
 position = Vector2( 960.153, 48.3406 )
 frames = SubResource( 9 )
 animation = "New Anim"
+frame = 1
 playing = true
 
 [node name="HintLabel" type="Label" parent="."]
-margin_top = 522.505
-margin_right = 1024.0
-margin_bottom = 573.505
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -512.0
+margin_top = 100.0
+margin_right = 512.0
+margin_bottom = 151.0
 custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Hint: Complete levels faster to get more stars"
+text = "Complete levels faster to get more stars"
 align = 1
 valign = 1
 uppercase = true
@@ -956,10 +960,10 @@ margin_right = -574.501
 margin_bottom = 496.323
 
 [node name="BackButton" type="Button" parent="."]
-margin_left = 80.0
-margin_top = 74.0
-margin_right = 180.001
-margin_bottom = 114.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -100.0
 rect_min_size = Vector2( 100, 40 )
 custom_styles/hover = SubResource( 12 )
 custom_styles/pressed = SubResource( 13 )

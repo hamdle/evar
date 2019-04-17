@@ -60,14 +60,14 @@ valign = 1
 uppercase = true
 
 [node name="ContentLabel" type="Label" parent="."]
-margin_left = 120.0
+margin_left = 200.0
 margin_top = 150.0
-margin_right = 1144.0
+margin_right = 1224.0
 margin_bottom = 550.0
 custom_fonts/font = SubResource( 9 )
 text = "1. Jump on spacecrafts to kill them
 
-2. The last spacecraft killed will eject an astronaut
+2. Kill all the spacecrafts
 
 3. Go pick up the astronaut
 
