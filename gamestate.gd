@@ -8,7 +8,9 @@ const number_of_levels = 18
 var level_map = {
 	"none": null,
 	"start": "res://Scenes/Screen/Start.tscn",
-	"character": "res://Scenes/Screen/Character.tscn",
+	"howtoplay": "res://Scenes/Screen/HowToPlay.tscn",
+	"controls": "res://Scenes/Screen/Controls.tscn",
+	"credits": "res://Scenes/Screen/Credits.tscn",
 	"levelselect": "res://Scenes/Screen/Arcade.tscn",
 	
 	"level1": "res://Scenes/Arcade/Level1.tscn",

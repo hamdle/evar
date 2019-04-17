@@ -61,7 +61,7 @@ animations = [ {
 } ]
 
 [sub_resource type="DynamicFontData" id=10]
-font_path = "res://Fonts/Ubuntu-R.ttf"
+font_path = "res://Fonts/Ubuntu-B.ttf"
 
 [sub_resource type="DynamicFont" id=11]
 size = 21
@@ -935,18 +935,15 @@ texture = ExtResource( 8 )
 position = Vector2( 960.153, 48.3406 )
 frames = SubResource( 9 )
 animation = "New Anim"
-frame = 2
 playing = true
 
-[node name="Label" type="Label" parent="."]
-visible = false
+[node name="HintLabel" type="Label" parent="."]
 margin_top = 522.505
 margin_right = 1024.0
 margin_bottom = 573.505
 custom_fonts/font = SubResource( 11 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Special Slam Dunk Edition Rules: 
-Slam dunk astronaut in to black hole"
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Hint: Complete levels faster to get more stars"
 align = 1
 valign = 1
 uppercase = true
@@ -959,16 +956,16 @@ margin_right = -574.501
 margin_bottom = 496.323
 
 [node name="BackButton" type="Button" parent="."]
-margin_left = 16.6857
-margin_top = 544.328
-margin_right = 116.686
-margin_bottom = 584.328
+margin_left = 80.0
+margin_top = 74.0
+margin_right = 180.001
+margin_bottom = 114.0
 rect_min_size = Vector2( 100, 40 )
 custom_styles/hover = SubResource( 12 )
 custom_styles/pressed = SubResource( 13 )
 custom_styles/normal = SubResource( 14 )
 custom_fonts/font = SubResource( 16 )
-custom_colors/font_color = Color( 0.12549, 0.12549, 0.12549, 1 )
+custom_colors/font_color = Color( 0.423529, 0.423529, 0.423529, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 text = "Back"

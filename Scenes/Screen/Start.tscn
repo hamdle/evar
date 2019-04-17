@@ -70,15 +70,15 @@ margin_top = -144.0
 margin_right = 168.5
 margin_bottom = -52.0
 
-[node name="PlayButton2" type="Button" parent="."]
+[node name="PlayButton" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -447.462
-margin_top = 38.5013
-margin_right = -347.462
-margin_bottom = 78.5013
+margin_left = -281.497
+margin_top = 35.7806
+margin_right = -181.497
+margin_bottom = 75.7806
 rect_min_size = Vector2( 100, 40 )
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
@@ -89,27 +89,64 @@ custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 text = "Play"
 
-[node name="CreditsButton3" type="Button" parent="."]
+[node name="HowToPlayButton" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -330.927
-margin_top = 39.1465
-margin_right = -190.927
-margin_bottom = 79.1465
+margin_left = -302.008
+margin_top = 97.755
+margin_right = -162.008
+margin_bottom = 137.755
 rect_min_size = Vector2( 100, 40 )
 custom_styles/hover = SubResource( 6 )
 custom_styles/pressed = SubResource( 7 )
 custom_styles/normal = SubResource( 8 )
 custom_fonts/font = SubResource( 10 )
-custom_colors/font_color = Color( 0.12549, 0.12549, 0.12549, 1 )
+custom_colors/font_color = Color( 0.423529, 0.423529, 0.423529, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+text = "How to play"
+
+[node name="ControlsButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -303.058
+margin_top = 143.371
+margin_right = -163.058
+margin_bottom = 183.371
+rect_min_size = Vector2( 100, 40 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.423529, 0.423529, 0.423529, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+text = "Controls"
+
+[node name="CreditsButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -304.069
+margin_top = 187.857
+margin_right = -164.069
+margin_bottom = 227.857
+rect_min_size = Vector2( 100, 40 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.423529, 0.423529, 0.423529, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 text = "Credits"
 
 [node name="BlueWave" type="Sprite" parent="."]
-visible = false
 position = Vector2( 169.808, 813.164 )
 texture = ExtResource( 4 )
 
@@ -165,6 +202,7 @@ text = "REMOVAL"
 [node name="Controls" type="Node" parent="."]
 
 [node name="PlayModeLabel" type="Label" parent="Controls"]
+visible = false
 margin_left = 176.041
 margin_top = 444.542
 margin_right = 514.041
@@ -175,6 +213,7 @@ text = "WASD    Move and Jump"
 uppercase = true
 
 [node name="PlayModeLabel2" type="Label" parent="Controls"]
+visible = false
 margin_left = 99.7174
 margin_top = 470.188
 margin_right = 437.717
@@ -185,6 +224,7 @@ text = "Click & drag    Launch"
 uppercase = true
 
 [node name="PlayModeLabel3" type="Label" parent="Controls"]
+visible = false
 margin_left = 127.297
 margin_top = 495.513
 margin_right = 465.297
@@ -195,6 +235,7 @@ text = "Space Bar    Throw Slam Dunk"
 uppercase = true
 
 [node name="PlayModeLabel4" type="Label" parent="Controls"]
+visible = false
 margin_left = 261.163
 margin_top = 484.116
 margin_right = 599.163
@@ -205,7 +246,9 @@ text = "_______"
 uppercase = true
 
 [node name="SlamDunkEdition" parent="." instance=ExtResource( 5 )]
-[connection signal="mouse_entered" from="PlayButton2" to="." method="_on_ArcadeButton2_mouse_entered"]
-[connection signal="mouse_exited" from="PlayButton2" to="." method="_on_ArcadeButton2_mouse_exited"]
-[connection signal="pressed" from="PlayButton2" to="." method="_on_ArcadeButton2_pressed"]
-[connection signal="pressed" from="CreditsButton3" to="." method="_on_ArcadeButton3_pressed"]
+[connection signal="mouse_entered" from="PlayButton" to="." method="_on_PlayButton_mouse_entered"]
+[connection signal="mouse_exited" from="PlayButton" to="." method="_on_PlayButton_mouse_exited"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="HowToPlayButton" to="." method="_on_HowToPlayButton_pressed"]
+[connection signal="pressed" from="ControlsButton" to="." method="_on_ControlsButton_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_CreditsButton_pressed"]
