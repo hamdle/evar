@@ -32,12 +32,12 @@ font_path = "res://Fonts/Ubuntu-B.ttf"
 size = 18
 font_data = SubResource( 8 )
 
-[sub_resource type="DynamicFontData" id=18]
+[sub_resource type="DynamicFontData" id=10]
 font_path = "res://Fonts/Righteous-Regular.ttf"
 
 [sub_resource type="DynamicFont" id=11]
 size = 34
-font_data = SubResource( 18 )
+font_data = SubResource( 10 )
 
 [sub_resource type="DynamicFontData" id=12]
 font_path = "res://Fonts/Ubuntu-R.ttf"
@@ -109,7 +109,7 @@ margin_top = -40.0
 margin_right = 50.0
 rect_min_size = Vector2( 100, 40 )
 custom_fonts/font = SubResource( 4 )
-text = "Quit"
+text = "Back"
 
 [node name="MenuButton" type="Button" parent="Die"]
 visible = false
@@ -187,7 +187,7 @@ margin_right = 50.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 100, 40 )
 custom_fonts/font = SubResource( 9 )
-text = "Quit"
+text = "Back"
 
 [node name="TimeLabel" type="Label" parent="Win"]
 visible = false
@@ -269,7 +269,7 @@ margin_bottom = 50.0
 rect_min_size = Vector2( 100, 40 )
 custom_fonts/font = SubResource( 17 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Quit"
+text = "Back"
 
 [node name="TimeLabel" type="Label" parent="Pause"]
 visible = false

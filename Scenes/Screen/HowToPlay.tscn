@@ -2,18 +2,18 @@
 
 [ext_resource path="res://Scenes/Screen/HowToPlay.gd" type="Script" id=1]
 
-[sub_resource type="StyleBoxEmpty" id=4]
-
-[sub_resource type="StyleBoxEmpty" id=5]
-
 [sub_resource type="StyleBoxEmpty" id=1]
 
-[sub_resource type="DynamicFontData" id=2]
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="DynamicFontData" id=4]
 font_path = "res://Fonts/Righteous-Regular.ttf"
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=5]
 size = 24
-font_data = SubResource( 2 )
+font_data = SubResource( 4 )
 
 [sub_resource type="DynamicFontData" id=6]
 font_path = "res://Fonts/Righteous-Regular.ttf"
@@ -39,10 +39,10 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -100.0
-custom_styles/hover = SubResource( 4 )
-custom_styles/pressed = SubResource( 5 )
-custom_styles/normal = SubResource( 1 )
-custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.423529, 0.423529, 0.423529, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
@@ -65,9 +65,9 @@ margin_top = 150.0
 margin_right = 1224.0
 margin_bottom = 550.0
 custom_fonts/font = SubResource( 9 )
-text = "1. Jump on spacecrafts to kill them
+text = "1. Jump on spacecraft to kill them
 
-2. Kill all the spacecrafts
+2. Kill all the spacecraft
 
 3. Go pick up the astronaut
 

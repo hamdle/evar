@@ -22,19 +22,19 @@ font_path = "res://Fonts/Righteous-Regular.ttf"
 size = 64
 font_data = SubResource( 6 )
 
-[sub_resource type="DynamicFontData" id=10]
-font_path = "res://Fonts/Ubuntu-B.ttf"
-
-[sub_resource type="DynamicFont" id=11]
-size = 21
-font_data = SubResource( 10 )
-
 [sub_resource type="DynamicFontData" id=8]
 font_path = "res://Fonts/Ubuntu-B.ttf"
 
 [sub_resource type="DynamicFont" id=9]
-size = 22
+size = 21
 font_data = SubResource( 8 )
+
+[sub_resource type="DynamicFontData" id=10]
+font_path = "res://Fonts/Ubuntu-B.ttf"
+
+[sub_resource type="DynamicFont" id=11]
+size = 22
+font_data = SubResource( 10 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -70,9 +70,9 @@ uppercase = true
 margin_top = 80.0
 margin_right = 1024.0
 margin_bottom = 161.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Game Design by Eric Marty"
+text = "Game Created by Eric Marty"
 align = 1
 valign = 1
 uppercase = true
@@ -82,7 +82,7 @@ margin_left = 250.0
 margin_top = 160.0
 margin_right = 1274.0
 margin_bottom = 563.0
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 11 )
 text = "About this project
 - This is my first game jam!
 - Godot version: build from master branch

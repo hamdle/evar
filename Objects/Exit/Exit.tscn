@@ -4,7 +4,7 @@
 [ext_resource path="res://Sprites/BlackHoles/black_hole_256.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 56.7656
+radius = 37.5217
 
 [node name="Exit" type="KinematicBody2D"]
 script = ExtResource( 1 )

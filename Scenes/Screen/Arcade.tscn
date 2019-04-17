@@ -127,9 +127,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -310.0
-margin_top = -150.0
+margin_top = -50.0
 margin_right = 310.0
-margin_bottom = 186.0
+margin_bottom = 50.0
 
 [node name="Row" type="GridContainer" parent="Container/LevelGrid"]
 margin_right = 620.0
@@ -394,12 +394,14 @@ position = Vector2( 80, 16 )
 texture = ExtResource( 8 )
 
 [node name="MarginContainer" type="MarginContainer" parent="Container/LevelGrid"]
+visible = false
 margin_top = 104.0
 margin_right = 620.0
 margin_bottom = 114.0
 rect_min_size = Vector2( 0, 10 )
 
 [node name="Row2" type="GridContainer" parent="Container/LevelGrid"]
+visible = false
 margin_top = 118.0
 margin_right = 620.0
 margin_bottom = 218.0
@@ -663,15 +665,17 @@ position = Vector2( 80, 16 )
 texture = ExtResource( 8 )
 
 [node name="MarginContainer2" type="MarginContainer" parent="Container/LevelGrid"]
-margin_top = 222.0
+visible = false
+margin_top = 118.0
 margin_right = 620.0
-margin_bottom = 232.0
+margin_bottom = 128.0
 rect_min_size = Vector2( 0, 10 )
 
 [node name="Row3" type="GridContainer" parent="Container/LevelGrid"]
-margin_top = 236.0
+visible = false
+margin_top = 132.0
 margin_right = 620.0
-margin_bottom = 336.0
+margin_bottom = 232.0
 columns = 6
 
 [node name="level13" type="Container" parent="Container/LevelGrid/Row3"]
@@ -935,7 +939,7 @@ texture = ExtResource( 8 )
 position = Vector2( 960.153, 48.3406 )
 frames = SubResource( 9 )
 animation = "New Anim"
-frame = 1
+frame = 3
 playing = true
 
 [node name="HintLabel" type="Label" parent="."]
@@ -947,7 +951,7 @@ margin_right = 512.0
 margin_bottom = 151.0
 custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Complete levels faster to get more stars"
+text = "Clear level faster to get more stars"
 align = 1
 valign = 1
 uppercase = true
