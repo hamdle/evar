@@ -641,4 +641,6 @@ limit_smoothed = true
 drag_margin_h_enabled = false
 smoothing_enabled = true
 offset_v = 1.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

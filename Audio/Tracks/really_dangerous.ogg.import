@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/really_dangerous.ogg-f644afa7ddcf06e59f2ba99d75b6df61.oggstr"
+
+[deps]
+
+source_file="res://Audio/Tracks/really_dangerous.ogg"
+dest_files=[ "res://.import/really_dangerous.ogg-f644afa7ddcf06e59f2ba99d75b6df61.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

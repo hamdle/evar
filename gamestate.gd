@@ -91,7 +91,7 @@ var local_launches = 0
 var local_moves = 0
 
 # Audio
-var stream_player
+var audio_player
 
 func _ready():
 	# Get main scene
@@ -104,6 +104,14 @@ func _ready():
 	arcade_mode()
 	# Default Druplicon character
 	select_character(CHARACTER.MAIN)
+	
+	# Init audio stream
+	audio_player = AudioStreamPlayer.new()
+	
+	# Add audio track stream
+	#current_scene_instance.add_child(audio_player)
+	#audio_player.stream = load("res://Audio/Tracks/song_for_someone.ogg")
+	#audio_player.play()
 	
 
 # Scene loading
@@ -124,7 +132,6 @@ func reload_scene():
 func load_scene(key):
 	current_level_key = key
 	var res = level_map[current_level_key]
-	print("key: " + key)
 	
 	# Change background color
 	# Black
@@ -147,6 +154,8 @@ func _deferred_load_scene(res):
 	#var root = get_tree().get_root()
 	#var stream = current_scene_instance.get_child(root.get_child_count())
 	
+	# Stop audio from playing music first
+	audio_player.stop()
 	# Immediately release current scene
 	current_scene_instance.free()
 	
@@ -165,6 +174,13 @@ func _deferred_load_scene(res):
 	get_tree().set_current_scene(current_scene_instance)
 	# Make sure the node tree is not paused
 	get_tree().paused = false
+	
+	# Load audio tracks and music
+	#if is_gameplay_scene(res):
+		# Add audio track stream
+		#get_tree().get_root().add_child(audio_player)
+		#audio_player.stream = load("res://Audio/Tracks/raining_outside.ogg")
+		#audio_player.play()
 
 # Complete level
 func level_won(finish_time):
@@ -182,6 +198,30 @@ func unlock_next_level():
 		if level_data[key] == "0-0":
 			level_data[key] = "4-0"
 
+# Support func - returns: is this a actual gameplay level?
+func is_gameplay_scene(res):
+	# TODO: rewrite this using a for loop
+	if res == level_map["level1"]:
+		return true
+	if res == level_map["level2"]:
+		return true
+	if res == level_map["level3"]:
+		return true
+	if res == level_map["level4"]:
+		return true
+	if res == level_map["level5"]:
+		return true
+	if res == level_map["level6"]:
+		return true
+		
+	return false
+
+func play_countdown_music():
+	#audio_player.stop()
+	#audio_player.stream = load("res://Audio/Tracks/really_dangerous.ogg")
+	#audio_player.play()
+	pass
+	
 # Game mode
 func arcade_mode():
 	current_mode = MODE.ARCADE

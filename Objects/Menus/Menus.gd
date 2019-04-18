@@ -30,6 +30,12 @@ func player_died():
 	$Die.visible = true
 	_level_over($Die)
 	
+	# Play game over sound
+	var audio_player = AudioStreamPlayer.new()
+	$Die.add_child(audio_player)
+	audio_player.stream = load("res://Audio/SFX/Blip_select 9.wav")
+	audio_player.play()
+	
 func player_win():
 	$Win.visible = true
 	
@@ -55,6 +61,12 @@ func player_win():
 	
 	# Set level over
 	_level_over($Win)
+	
+	# Play win sound
+	var audio_player = AudioStreamPlayer.new()
+	$Win.add_child(audio_player)
+	audio_player.stream = load("res://Audio/SFX/Blip_select 9.wav")
+	audio_player.play()
 
 func _level_pause():
 	paused = not paused
@@ -78,10 +90,18 @@ func _level_pause():
 	
 	$Pause.visible = paused
 	get_tree().paused = paused
+	
+	# Play jump sound
+	var audio_player = AudioStreamPlayer.new()
+	$Pause.add_child(audio_player)
+	audio_player.stream = load("res://Audio/SFX/Blip_select 9.wav")
+	audio_player.play()
 
 func _level_over(menu):
 	get_tree().paused = true
 	showing_menu = true
+	
+	
 
 # Signals
 

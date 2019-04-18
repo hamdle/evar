@@ -16,6 +16,12 @@ func enter(player):
 	var gs = get_node("/root/gamestate")
 	gs.local_jumps += 1
 	
+	# Play jump sound
+	var audio_player = AudioStreamPlayer.new()
+	player.add_child(audio_player)
+	audio_player.stream = load("res://Audio/SFX/Blip_select 9.wav")
+	audio_player.play()
+	
 	if player.is_on_floor():
 		player.motion.y = -jump_height
 		player.get_node("AnimationPlayer").play("SETUP")

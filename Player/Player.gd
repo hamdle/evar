@@ -98,10 +98,14 @@ func throw_key():
 	if has_key:
 		key_thrown = true
 		var key = get_node("/root/World/Key")
+		var audio_player = AudioStreamPlayer.new()
+		
 		key.throw()
 	# $Position2D/Sprite.flip_
 	# True is left <--
 	# Flase is right -->
+	# Play game over sound
+	
 
 # Exit entered signal
 func _on_Exit_entered(obj_entered):

@@ -12,6 +12,11 @@ export var spawn_y_motion = 500
 func enter(key):
 	print(key.name + " SHOW")
 	
+	var audio_player = AudioStreamPlayer.new()
+	key.add_child(audio_player)
+	audio_player.stream = load("res://Audio/SFX/Blip_select 9.wav")
+	audio_player.play()
+	
 	# Adjust key spawn y position to avoid
 	# hitting player instantly
 	var adjusted_pos = Vector2(key.spawn_position.x, key.spawn_position.y + -75)

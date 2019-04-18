@@ -18,7 +18,10 @@ func enter(key):
 	var col = key.get_node("CollisionShape2D")
 	col.disabled = false
 	
-	
+	var audio_player = AudioStreamPlayer.new()
+	key.add_child(audio_player)
+	audio_player.stream = load("res://Audio/SFX/Blip_select 9.wav")
+	audio_player.play()
 	
 	var player = get_tree().get_root().get_node("World/Player")
 	var player_sprite = player.get_node("Position2D/Sprite")

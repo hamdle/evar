@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/raining_outside.ogg-7bf2e5005934374e0e27516b0861aee9.oggstr"
+
+[deps]
+
+source_file="res://Audio/Tracks/raining_outside.ogg"
+dest_files=[ "res://.import/raining_outside.ogg-7bf2e5005934374e0e27516b0861aee9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

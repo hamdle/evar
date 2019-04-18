@@ -13,6 +13,8 @@ const AIR_FRICTION = 0.1
 func enter(player):
 	print(player.name + " DIE")
 	# get_tree().reload_current_scene()
+	
+	# Death sfx played from menus
 	var menus = get_tree().get_root().get_node("World/Menus")
 	menus.player_died()
 
