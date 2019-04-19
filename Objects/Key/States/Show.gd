@@ -31,7 +31,9 @@ func enter(key):
 		key.motion.x = -spawn_x_motion
 	# Throw key up
 	key.motion.y = -spawn_y_motion
-	pass
+	
+	# The key is now able to end the game by hitting the black hole
+	player.set_key_thrown()
 
 func exit(key):
 	pass

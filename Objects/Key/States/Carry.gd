@@ -20,6 +20,10 @@ func enter(key):
 	audio_player.stream = load("res://Audio/SFX/Blip_select 9.wav")
 	audio_player.play()
 	
+	# Make the key able to trigger col with black hole
+	var player = get_tree().get_root().get_node("World/Player")
+	player.set_key_thrown()
+	
 	# Connect signal for Carry state
 	var killTimer = get_tree().get_root().get_node("World/KillTimer")
 	self.connect("key_carry", killTimer, "_on_key_carry")

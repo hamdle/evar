@@ -1,73 +1,175 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://Sprites/Web/Builder/home-banner-1280.png" type="Texture" id=1]
-[ext_resource path="res://Sprites/Web/nav-header.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Web/Builder/footer-1280.png" type="Texture" id=3]
-[ext_resource path="res://Objects/Floor.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Objects/Key/Key.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Objects/Exit/Exit.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Enemies/Bug/Bug.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Objects/Menus/Menus.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Enemies/Bug/Bug.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/Exit/Exit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemies/Flying/Flying.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites/orange_ui.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/red_ui.png" type="Texture" id=5]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Key/Key.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Sprites/Tilemaps/tilemap_colors.png" type="Texture" id=8]
+[ext_resource path="res://Objects/KillTimer/KillTimer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/Menus/Menus.tscn" type="PackedScene" id=10]
 
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
-[node name="World" type="Node" index="0"]
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
-[node name="TestObjects" type="Node" parent="." index="0"]
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
-[node name="Polygon2D" type="Polygon2D" parent="TestObjects" index="0"]
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
-polygon = PoolVector2Array( -95.5859, 408, 1148.41, 408, 1088.41, 620, -35.5859, 620 )
-uv = PoolVector2Array(  )
-color = Color( 1, 1, 1, 1 )
-vertex_colors = PoolColorArray(  )
-offset = Vector2( 0, 0 )
-antialiased = false
-texture = null
-texture_offset = Vector2( 0, 0 )
-texture_scale = Vector2( 1, 1 )
-texture_rotation_degrees = 0.0
-invert_enable = false
-invert_border = 100.0
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
-[node name="home-banner-1280" type="Sprite" parent="TestObjects" index="1"]
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
-position = Vector2( 484.414, 259.115 )
-texture = ExtResource( 1 )
+[sub_resource type="TileSet" id=7]
+0/name = "tilemap_colors.png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "tilemap_colors.png 1"
+1/texture = ExtResource( 8 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 64, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "tilemap_colors.png 2"
+2/texture = ExtResource( 8 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 128, 0, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "tilemap_colors.png 3"
+3/texture = ExtResource( 8 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 64, 64, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "tilemap_colors.png 4"
+4/texture = ExtResource( 8 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 64, 64, 64, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "tilemap_colors.png 5"
+5/texture = ExtResource( 8 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 128, 64, 64, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
 
-[node name="nav-header" type="Sprite" parent="TestObjects" index="2"]
+[node name="World" type="Node"]
 
-position = Vector2( 512.414, 40 )
-texture = ExtResource( 2 )
+[node name="Exit" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1351.33, 1259.26 )
 
-[node name="footer-1280" type="Sprite" parent="TestObjects" index="3"]
+[node name="Bug2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 847.408, 1237.08 )
 
-position = Vector2( 509.692, 839.482 )
-texture = ExtResource( 3 )
+[node name="Key" parent="." instance=ExtResource( 7 )]
+position = Vector2( -89.7859, 67.2781 )
 
-[node name="Floor" parent="TestObjects" index="4" instance=ExtResource( 4 )]
+[node name="Player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1342.65, 950.36 )
 
-editor/display_folded = false
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 512.644, 573.54 )
-_sections_unfolded = [ "Material", "Pickable", "Transform", "Visibility", "collision" ]
+[node name="LevelMap" type="Node2D" parent="."]
 
-[node name="Key" parent="." index="1" instance=ExtResource( 5 )]
+[node name="TileMap" type="TileMap" parent="LevelMap"]
+tile_set = SubResource( 7 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 41, 4, 0, 65536, 4, 0, 65577, 4, 0, 131072, 4, 0, 131113, 4, 0, 196608, 4, 0, 196649, 4, 0, 262144, 4, 0, 262185, 4, 0, 327680, 4, 0, 327721, 4, 0, 393216, 4, 0, 393257, 4, 0, 458752, 4, 0, 458793, 4, 0, 589823, 4, 0, 524329, 4, 0, 655358, 4, 0, 655359, 4, 0, 589865, 4, 0, 720895, 4, 0, 655401, 4, 0, 786431, 4, 0, 720937, 4, 0, 851967, 4, 0, 786473, 4, 0, 917503, 4, 0, 852009, 4, 0, 983039, 4, 0, 917545, 4, 0, 1048575, 4, 0, 983049, 1, 0, 983050, 1, 0, 983051, 1, 0, 983052, 1, 0, 983053, 1, 0, 983054, 1, 0, 983055, 1, 0, 983057, 1, 0, 983081, 4, 0, 1114111, 4, 0, 1048596, 1, 0, 1048597, 1, 0, 1048617, 4, 0, 1179647, 4, 0, 1114132, 1, 0, 1114153, 4, 0, 1245183, 4, 0, 1179667, 1, 0, 1179689, 4, 0, 1310719, 4, 0, 1245225, 4, 0, 1376255, 4, 0, 1310739, 1, 0, 1310761, 4, 0, 1441791, 4, 0, 1376256, 0, 0, 1376257, 1, 0, 1376258, 1, 0, 1376259, 1, 0, 1376260, 1, 0, 1376261, 1, 0, 1376262, 1, 0, 1376263, 1, 0, 1376264, 1, 0, 1376265, 1, 0, 1376266, 1, 0, 1376267, 1, 0, 1376268, 1, 0, 1376269, 1, 0, 1376270, 1, 0, 1376271, 1, 0, 1376272, 1, 0, 1376273, 1, 0, 1376274, 1, 0, 1376275, 1, 0, 1376276, 1, 0, 1376277, 1, 0, 1376278, 1, 0, 1376279, 1, 0, 1376297, 4, 0, 1441792, 3, 0, 1441793, 3, 0, 1441794, 3, 0, 1441795, 3, 0, 1441796, 3, 0, 1441797, 3, 0, 1441798, 3, 0, 1441815, 1, 0, 1441816, 3, 0, 1441833, 4, 0, 1507328, 3, 0, 1507329, 3, 0, 1507330, 3, 0, 1507331, 3, 0, 1507332, 3, 0, 1507333, 3, 0, 1507334, 3, 0, 1507351, 1, 0, 1507352, 3, 0, 1507353, 3, 0, 1507354, 3, 0, 1507369, 4, 0, 1572864, 3, 0, 1572865, 3, 0, 1572866, 3, 0, 1572867, 3, 0, 1572868, 3, 0, 1572869, 3, 0, 1572870, 3, 0, 1572887, 1, 0, 1572888, 3, 0, 1572889, 3, 0, 1572890, 3, 0, 1572891, 3, 0, 1572905, 4, 0, 1638400, 3, 0, 1638401, 3, 0, 1638402, 3, 0, 1638403, 3, 0, 1638404, 3, 0, 1638405, 3, 0, 1638406, 3, 0, 1638423, 1, 0, 1638424, 3, 0, 1638425, 3, 0, 1638426, 3, 0, 1638427, 3, 0, 1638428, 3, 0, 1638429, 3, 0, 1638430, 3, 0, 1638431, 3, 0, 1638432, 3, 0, 1638433, 3, 0, 1638434, 3, 0, 1638435, 3, 0, 1638436, 3, 0, 1638437, 3, 0, 1638438, 3, 0, 1638439, 3, 0, 1638440, 3, 0, 1638441, 4, 0, 1703959, 1, 0, 1769495, 1, 0, 1835031, 1, 0 )
 
-position = Vector2( -86.201, 82.693 )
+[node name="Wave2" type="Sprite" parent="."]
+position = Vector2( 961.375, 1575.18 )
+texture = ExtResource( 4 )
 
-[node name="Exit" parent="." index="2" instance=ExtResource( 6 )]
+[node name="Wave3" type="Sprite" parent="."]
+position = Vector2( 3666.41, 871.218 )
+scale = Vector2( 0.562454, 1 )
+texture = ExtResource( 5 )
 
-position = Vector2( 891.192, 518.715 )
+[node name="Wave4" type="Sprite" parent="."]
+position = Vector2( -229.5, -140.751 )
+rotation = 4.71239
+texture = ExtResource( 5 )
 
-[node name="Bug2" parent="." index="3" instance=ExtResource( 7 )]
+[node name="Wave" type="Sprite" parent="."]
+position = Vector2( -154.218, 871.577 )
+rotation = 1.5708
+texture = ExtResource( 5 )
 
-position = Vector2( 417.358, 323.211 )
+[node name="Menus" parent="." instance=ExtResource( 10 )]
 
-[node name="Player" parent="." index="4" instance=ExtResource( 8 )]
+[node name="KillTimer" parent="." instance=ExtResource( 9 )]
 
-position = Vector2( 140, 376 )
-
-[node name="Menus" parent="." index="5" instance=ExtResource( 9 )]
-
-
+[node name="Flying" parent="." instance=ExtResource( 3 )]
+position = Vector2( 802.456, 872.86 )

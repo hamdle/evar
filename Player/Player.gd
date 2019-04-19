@@ -94,6 +94,9 @@ func load_character():
 	if gs.current_character == gs.CHARACTER.MAIN:
 		$Position2D/Sprite.texture = $Position2D/Sprite.drupal_texture
 
+func set_key_thrown():
+	key_thrown = true
+
 func throw_key():
 	if has_key:
 		key_thrown = true
