@@ -33,7 +33,7 @@ font_data = SubResource( 8 )
 font_path = "res://Fonts/Ubuntu-B.ttf"
 
 [sub_resource type="DynamicFont" id=11]
-size = 22
+size = 27
 font_data = SubResource( 10 )
 
 [node name="Control" type="Control"]
@@ -79,20 +79,14 @@ uppercase = true
 
 [node name="ContentLabel" type="Label" parent="."]
 margin_left = 250.0
-margin_top = 160.0
+margin_top = 200.0
 margin_right = 1274.0
-margin_bottom = 563.0
+margin_bottom = 603.0
 custom_fonts/font = SubResource( 11 )
-text = "About this project
-- This is my first game jam!
-- Godot version: build from master branch
-- Github repo: github.com/hamdle/evar
-- Developed in Linux
+text = "ericmarty.itch.io/extravehicular-astronaut-remover
 
-Attribution and recognition
-1. Black hole photo taken by Event Horizon Telescope Collaboration
-2. Astronaut model created by kwnet_at
-3. Colors taken from Mars poster by NASA JPL
-4. Spacecraft design inspired by 2001: A Space Odyssey
+itch.io/jam/godot-wild-jam-8
+
+github.com/hamdle/evar
 "
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
