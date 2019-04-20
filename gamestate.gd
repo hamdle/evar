@@ -61,11 +61,11 @@ var level_data = {
 
 var time_tables = {
 	"level1": [10,5],
-	"level2": [16,12],
-	"level3": [32,24],
-	"level4": [10,5],
-	"level5": [10,5],
-	"level6": [10,5],
+	"level2": [14,10],
+	"level3": [38,28],
+	"level4": [17,12],
+	"level5": [22,15],
+	"level6": [15,10],
 	
 	"level7": [10,5],
 	"level8": [10,5],
@@ -216,8 +216,8 @@ func get_level_audio_track(res):
 		return "res://Audio/SFX/level_start_5.wav"
 	if res == level_map["level6"]:
 		return "res://Audio/SFX/level_start_6.wav"
-	if res == level_map["levelselect"]:
-		return "res://Audio/SFX/level_start_3.wav"
+	#if res == level_map["levelselect"]:
+	#	return "res://Audio/SFX/level_start_3.wav"
 		
 	return null
 
