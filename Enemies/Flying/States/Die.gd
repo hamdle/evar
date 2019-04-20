@@ -10,6 +10,12 @@ func enter(flying):
 	
 	flying.motion.x = 0
 	flying.motion.y = 0
+	
+	var audio_player = AudioStreamPlayer.new()
+	flying.add_child(audio_player)
+	audio_player.stream = load("res://Audio/SFX/bug_die.wav")
+	audio_player.play()
+	
 	flying.die()
 	pass
 

@@ -12,7 +12,7 @@ func enter(bug):
 	
 	var audio_player = AudioStreamPlayer.new()
 	bug.add_child(audio_player)
-	audio_player.stream = load("res://Audio/SFX/Blip_select 9.wav")
+	audio_player.stream = load("res://Audio/SFX/bug_die.wav")
 	audio_player.play()
 	
 	bug.die()

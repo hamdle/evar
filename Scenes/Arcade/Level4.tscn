@@ -176,4 +176,4 @@ texture = ExtResource( 5 )
 [node name="KillTimer" parent="." instance=ExtResource( 2 )]
 
 [node name="Flying" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1668.99, 1375.94 )
+position = Vector2( 1523.24, 1309.69 )

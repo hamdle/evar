@@ -176,11 +176,11 @@ func _deferred_load_scene(res):
 	get_tree().paused = false
 	
 	# Load audio tracks and music
-	#if is_gameplay_scene(res):
-		# Add audio track stream
-		#get_tree().get_root().add_child(audio_player)
-		#audio_player.stream = load("res://Audio/Tracks/raining_outside.ogg")
-		#audio_player.play()
+	var audio_clip = get_level_audio_track(res)
+	if audio_clip != null:
+		get_tree().get_root().add_child(audio_player)
+		audio_player.stream = load(audio_clip)
+		audio_player.play()
 
 # Complete level
 func level_won(finish_time):
@@ -199,22 +199,24 @@ func unlock_next_level():
 			level_data[key] = "4-0"
 
 # Support func - returns: is this a actual gameplay level?
-func is_gameplay_scene(res):
+func get_level_audio_track(res):
 	# TODO: rewrite this using a for loop
 	if res == level_map["level1"]:
-		return true
+		return "res://Audio/SFX/level_start_1.wav"
 	if res == level_map["level2"]:
-		return true
+		return "res://Audio/SFX/level_start_2.wav"
 	if res == level_map["level3"]:
-		return true
+		return "res://Audio/SFX/level_start_3.wav"
 	if res == level_map["level4"]:
-		return true
+		return "res://Audio/SFX/level_start_4.wav"
 	if res == level_map["level5"]:
-		return true
+		return "res://Audio/SFX/level_start_5.wav"
 	if res == level_map["level6"]:
-		return true
+		return "res://Audio/SFX/level_start_6.wav"
+	if res == level_map["levelselect"]:
+		return "res://Audio/SFX/level_start_3.wav"
 		
-	return false
+	return null
 
 func play_countdown_music():
 	#audio_player.stop()

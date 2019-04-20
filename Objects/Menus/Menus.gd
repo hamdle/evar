@@ -33,7 +33,7 @@ func player_died():
 	# Play game over sound
 	var audio_player = AudioStreamPlayer.new()
 	$Die.add_child(audio_player)
-	audio_player.stream = load("res://Audio/SFX/Blip_select 9.wav")
+	audio_player.stream = load("res://Audio/SFX/die_menu.wav")
 	audio_player.play()
 	
 func player_win():
@@ -65,7 +65,7 @@ func player_win():
 	# Play win sound
 	var audio_player = AudioStreamPlayer.new()
 	$Win.add_child(audio_player)
-	audio_player.stream = load("res://Audio/SFX/Blip_select 9.wav")
+	audio_player.stream = load("res://Audio/SFX/win_menu_5.wav")
 	audio_player.play()
 
 func _level_pause():
@@ -94,7 +94,7 @@ func _level_pause():
 	# Play jump sound
 	var audio_player = AudioStreamPlayer.new()
 	$Pause.add_child(audio_player)
-	audio_player.stream = load("res://Audio/SFX/Blip_select 9.wav")
+	audio_player.stream = load("res://Audio/SFX/pause_menu.wav")
 	audio_player.play()
 
 func _level_over(menu):

@@ -20,7 +20,7 @@ func enter(key):
 	
 	var audio_player = AudioStreamPlayer.new()
 	key.add_child(audio_player)
-	audio_player.stream = load("res://Audio/SFX/Blip_select 9.wav")
+	audio_player.stream = load("res://Audio/SFX/key_throw.wav")
 	audio_player.play()
 	
 	var player = get_tree().get_root().get_node("World/Player")

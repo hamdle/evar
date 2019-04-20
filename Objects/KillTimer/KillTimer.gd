@@ -25,7 +25,7 @@ func _process(delta):
 			# Check for second tick to play sound
 			var audio_player = AudioStreamPlayer.new()
 			$Container.add_child(audio_player)
-			audio_player.stream = load("res://Audio/SFX/Blip_select 9.wav")
+			audio_player.stream = load("res://Audio/SFX/countdown_timer.wav")
 			audio_player.play()
 		
 		prev_count_down = count_down

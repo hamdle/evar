@@ -29,11 +29,12 @@ func enter(player):
 	if player.is_on_floor():
 		player.motion = calculate_launch_velocity(player.mouse_press, player.mouse_release)
 		# player.motion = calculate_launch_velocity(player.position, player.mouse_release)
+		
 		# Play jump sound
-		var audio_player = AudioStreamPlayer.new()
-		player.add_child(audio_player)
-		audio_player.stream = load("res://Audio/SFX/Blip_select 9.wav")
-		audio_player.play()
+		#var audio_player = AudioStreamPlayer.new()
+		#player.add_child(audio_player)
+		#audio_player.stream = load("res://Audio/SFX/launch.wav")
+		#audio_player.play()
 		
 		if player.motion == Vector2(0, 0):
 			false_launch = true

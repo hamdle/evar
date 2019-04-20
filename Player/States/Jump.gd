@@ -19,7 +19,7 @@ func enter(player):
 	# Play jump sound
 	var audio_player = AudioStreamPlayer.new()
 	player.add_child(audio_player)
-	audio_player.stream = load("res://Audio/SFX/Blip_select 9.wav")
+	audio_player.stream = load("res://Audio/SFX/jump.wav")
 	audio_player.play()
 	
 	if player.is_on_floor():

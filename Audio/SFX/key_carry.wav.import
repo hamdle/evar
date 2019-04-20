@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/key_carry.wav-565292aa0684de1f5b08d96aed3c5745.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/key_carry.wav"
+dest_files=[ "res://.import/key_carry.wav-565292aa0684de1f5b08d96aed3c5745.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

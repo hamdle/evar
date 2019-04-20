@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/level_start_6.wav-977ba4a7a7573f9105fbe2b0e39c3a36.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/level_start_6.wav"
+dest_files=[ "res://.import/level_start_6.wav-977ba4a7a7573f9105fbe2b0e39c3a36.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
