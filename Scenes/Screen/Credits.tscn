@@ -72,7 +72,7 @@ margin_right = 1024.0
 margin_bottom = 161.0
 custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Game Created by Eric Marty"
+text = "Game Created by hamdle"
 align = 1
 valign = 1
 uppercase = true
@@ -83,7 +83,7 @@ margin_top = 200.0
 margin_right = 1274.0
 margin_bottom = 603.0
 custom_fonts/font = SubResource( 11 )
-text = "ericmarty.itch.io/extravehicular-astronaut-remover
+text = "ham-dle.itch.io/extravehicular-astronaut-remover
 
 itch.io/jam/godot-wild-jam-8
 

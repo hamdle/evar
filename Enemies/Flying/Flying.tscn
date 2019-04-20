@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Enemies/Flying/Flying.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Ships/ship_angle_game1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Ships/astroship_game_r2.png" type="Texture" id=2]
 [ext_resource path="res://Enemies/Flying/States/Idle.gd" type="Script" id=3]
 [ext_resource path="res://Enemies/Flying/States/Patrol.gd" type="Script" id=4]
 [ext_resource path="res://Enemies/Flying/States/Attack.gd" type="Script" id=5]
@@ -166,7 +166,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( -1, -13 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Position2D/Sprite:rotation_degrees")

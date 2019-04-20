@@ -109,6 +109,7 @@ func _ready():
 	# Init audio stream
 	audio_player = AudioStreamPlayer.new()
 	
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), -10)
 	# Add audio track stream
 	#current_scene_instance.add_child(audio_player)
 	#audio_player.stream = load("res://Audio/Tracks/song_for_someone.ogg")

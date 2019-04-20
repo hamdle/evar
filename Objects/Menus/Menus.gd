@@ -65,7 +65,8 @@ func player_win():
 	# Play win sound
 	var audio_player = AudioStreamPlayer.new()
 	$Win.add_child(audio_player)
-	audio_player.stream = load("res://Audio/SFX/win_menu_5.wav")
+	audio_player.stream = load("res://Audio/SFX/win_menu.wav")
+	audio_player.volume_db = -10
 	audio_player.play()
 
 func _level_pause():
