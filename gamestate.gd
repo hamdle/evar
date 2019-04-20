@@ -12,6 +12,7 @@ var level_map = {
 	"controls": "res://Scenes/Screen/Controls.tscn",
 	"credits": "res://Scenes/Screen/Credits.tscn",
 	"levelselect": "res://Scenes/Screen/Arcade.tscn",
+	"winscreen": "res://Scenes/Screen/WinScreen.tscn",
 	
 	"level1": "res://Scenes/Arcade/Level1.tscn",
 	"level2": "res://Scenes/Arcade/Level2.tscn",
@@ -60,8 +61,8 @@ var level_data = {
 
 var time_tables = {
 	"level1": [10,5],
-	"level2": [12,7],
-	"level3": [12,10],
+	"level2": [16,12],
+	"level3": [32,24],
 	"level4": [10,5],
 	"level5": [10,5],
 	"level6": [10,5],
@@ -118,9 +119,11 @@ func _ready():
 func load_next_scene():
 	var i = current_level_key.to_int() + 1
 	var key = "level" + str(i)
-	
+	print(key)
 	if i > number_of_levels:
 		load_scene("levelselect")
+	elif key == "level7":
+		load_scene("winscreen")
 	else:
 		load_scene(key)
 	pass
